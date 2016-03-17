@@ -13,7 +13,7 @@ use Yii;
  * @property integer $created_at
  * @property integer $updated_at
  */
-class Category extends \yii\db\ActiveRecord
+class Category extends \common\models\CustomActiveRecord
 {
     /**
      * @inheritdoc
