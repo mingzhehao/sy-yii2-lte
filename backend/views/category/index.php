@@ -41,8 +41,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         1 => '审核通过',
                    ],  
             ],
-            'created_at',
-            'updated_at',
+            [   
+                'attribute' => 'created_at', 
+                'format' => 'text',
+                'value' => function($data){return date("Y-m-d H:i:s",($data->created_at));},
+            ],  
+            [   
+                'attribute' => 'updated_at', 
+                'format' => 'text',
+                'value' => function($data){return date("Y-m-d H:i:s",($data->updated_at));},
+            ],  
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
