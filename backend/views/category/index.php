@@ -27,7 +27,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            'status',
+            [   
+                'attribute' => 'status',
+                'label'     => '评论状态',
+                'value'     => function ($data) {
+                    if(!empty($data->status))
+                        return '审核通过';
+                    else
+                        return '等待审核';
+                },  
+                'filter'    => [
+                        0 => '等待审核',//key 0  为传递到后台搜索值，值为对外显示值
+                        1 => '审核通过',
+                   ],  
+            ],
             'created_at',
             'updated_at',
 
