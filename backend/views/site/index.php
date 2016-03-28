@@ -5,7 +5,7 @@
 // $this->title = 'My Yii Application';
 $this->title = '';
 ?>
-<div class="site-index" style="background:url('http://www.genze.com/wp-content/uploads/2015/11/banner-image.jpg')">
+<div class="site-index" style="background:url('/images/banner-image.jpg')">
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
