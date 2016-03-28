@@ -2,7 +2,7 @@
 
 namespace backend\controllers;
 use common\models\ElasticSearch;
-use yii\web\Controller;
+use backend\controllers\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
