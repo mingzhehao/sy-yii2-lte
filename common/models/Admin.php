@@ -67,7 +67,7 @@ class Admin extends \common\models\CustomActiveRecord
         {   
             $this->password_hash = Yii::$app->security->generatePasswordHash($this->password_hash);
             $this->auth_key   = Yii::$app->security->generateRandomString();
-            $this->password_reset_token = ''; 
+            $this->password_reset_token = NULL; 
         }   
         else
         {   
