@@ -20,7 +20,8 @@
         "yiisoft/yii2-swiftmailer": "*",
         "dmstr/yii2-adminlte-asset": "2.*",
         "yiisoft/yii2-elasticsearch": "^2.0",
-        "mongosoft/yii2-upload-behavior": "*"
+        "mongosoft/yii2-upload-behavior": "*",
+        "2amigos/yii2-file-upload-widget": "~1.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
