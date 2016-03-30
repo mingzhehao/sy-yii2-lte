@@ -16,4 +16,4 @@
 
 5.对runtime ，web assert 等目录 进行nginx 用户组权限赋予
 
-6.
+6.新添加上传插件2amigos/yii2-file-upload-widget 上传控制器为MediaController，控制器内填写上传目录等，需配置目录nginx可写权限
