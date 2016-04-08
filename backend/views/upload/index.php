@@ -34,6 +34,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
+                'attribute' => 'image',
+                'label'     => '图片显示',
+                'format' => 'raw',
+                'headerOptions' => [
+                    'width'     => 50,
+                    'height'    => 50,
+                ],
+                'value'     => function ($data) {
+                    //$sourcePath = Yii::$app->params['upload']['webPath'];
+                    $link = Html::a(Html::img($data->image, ['alt' => 'ImageSource',
+                            'width' => 100,'height' => 100]),[$data->image]);
+                    return $link;
+                }
+            ],
+            [
                 'attribute' => 'file',
                 'format' => ['image',['width'=>'100','height'=>'100']],
                 'value'     => function ($data) {
