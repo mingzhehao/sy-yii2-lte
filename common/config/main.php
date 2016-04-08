@@ -6,6 +6,9 @@ return [
         'User' => [
             'class' => 'common\modules\user\Module',//大写User处理module模块，user是后台管理使用
         ], 
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ]       
     ],
     'components' => [
         'cache' => [
