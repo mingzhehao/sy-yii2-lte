@@ -48,7 +48,8 @@ use dosamigos\fileupload\FileUploadUI;
         'url' => ['media/upload','type' => 'file'],
         'gallery' => false,
         'fieldOptions' => [
-                'accept' => 'image/*'
+            'accept' => 
+                'application/zip,application/x-rar-compressed,',//限制zip和rar包
         ],
         'clientOptions' => [
                 'maxFileSize' => 2000000

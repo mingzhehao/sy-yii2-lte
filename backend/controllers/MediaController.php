@@ -17,6 +17,16 @@ use yii\helpers\FileHelper;
  */
 class MediaController extends Controller
 {
+    private $allowedImageType = array(
+                            'image/jpeg',
+                            'image/jpg',
+                            'image/png',
+                            'image/gif',
+                        );
+    private $allowedFileType = array(
+                            'application/zip',
+                            'application/x-rar-compressed',
+                        );
     public function behaviors()
     {
         return [
@@ -37,6 +47,20 @@ class MediaController extends Controller
          **/
         $type = Yii::$app->request->get('type');
         $imageFile = UploadedFile::getInstanceByName("$type");
+        switch ($type){
+            case 'image':
+                if(!in_array($imageFile->type,$this->allowedImageType))
+                {
+                    return '';
+                }
+                break;
+            case 'file':
+                if(!in_array($imageFile->type,$this->allowedFileType))
+                {
+                    return json_encode(array("retcode" => "-1","retmsg" => "上传类型不符合要求！"));
+                }
+                break;
+        }
         $directory = \Yii::getAlias('@backend/web/upload/temp') . DIRECTORY_SEPARATOR . Yii::$app->session->id . DIRECTORY_SEPARATOR;
         if (!is_dir($directory)) {
             @mkdir($directory, 0777, true);
