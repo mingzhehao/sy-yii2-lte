@@ -5,7 +5,6 @@ namespace backend\controllers;
 use Yii;
 use common\models\Memberinfo;
 use common\models\MemberinfoSearch;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use \yii\web\Response;

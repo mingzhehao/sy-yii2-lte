@@ -14,13 +14,6 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'view' => [
-             'theme' => [
-                 'pathMap' => [
-                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
-                 ],
-             ],
-         ],
         'i18n' => [
             'translations' => [
                 'app'=>[
@@ -55,6 +48,9 @@ return [
                 ]
             ],
         ],
+        'keyStorage' => [                                    
+            'class' => 'common\components\keyStorage\KeyStorage'
+        ],  
         'elasticsearch' => [
             'class' => 'yii\elasticsearch\Connection',
             'nodes' => [
@@ -62,14 +58,6 @@ return [
                 // configure more hosts if you have a cluster
             ],
         ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' =>  [
-                        'User/<id:\d+>'=>'User/home',
-                        'User/avatar'=>'User/home/avatar',
-                        'User/setting'=>'User/home/show',
-                ],  
-        ],  
+
     ],
 ];

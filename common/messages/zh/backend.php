@@ -17,7 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Main' => '',
+    'Main' => '菜单列表',
     'Other' => '',
     'This email has already been taken.' => '',
     'Account' => '账号',
@@ -72,6 +72,7 @@ return [
     'I18n Messages' => '国际化信息',
     'I18n Source Messages' => '国际化源信息',
     'ID' => 'ID',
+    'ImageSetting' => '头像',
     'If you\'ll leave this field empty, slug will be generated automatically' => '如果该字段留空的话，系统将自动生成一个slug',
     'Incorrect username or password.' => '用户名或密码错误',
     'Internal IP' => '内网IP',

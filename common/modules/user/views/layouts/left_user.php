@@ -31,7 +31,7 @@ else
 }
 
 ?>
-<?php $this->beginContent('@app/views/layouts/main.php'); ?>
+<?php $this->beginContent('@backend/views/layouts/common.php'); ?>
 <?php //$this->beginContent('@app/views/layouts/main.php'); ?>
 <style type="text/css">
 .list-group .glyphicon {

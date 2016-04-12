@@ -72,6 +72,7 @@ return [
     'I18n Messages' => 'Mensajes I18N',
     'I18n Source Messages' => 'Mensajes Fuente I18N',
     'ID' => 'ID',
+    'ImageSetting' => 'ImageSetting',
     'If you\'ll leave this field empty, slug will be generated automatically' => 'Si dejas el campo vacío el slug se generará de forma automática',
     'Incorrect username or password.' => 'Nombre usuario o password incorrecto',
     'Internal IP' => 'IP interna',

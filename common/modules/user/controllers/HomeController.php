@@ -7,6 +7,7 @@ use yii\web\Controller;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use common\models\User;
+use backend\models\AccountForm;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\helpers\Url;
@@ -16,6 +17,7 @@ use yii\web\UploadedFile;
 
 class HomeController extends Controller
 {
+    public $layout = "left_user_setting";
     public function behaviors()
     {
         return [
@@ -64,25 +66,50 @@ class HomeController extends Controller
         {
             return $this->render('error',['id'=>$id]);
         }
-        $this->layout = 'left_user';
         return $this->render('index',['model'=>$model,]);
     }
 
-    /*用户基本信息对外展示设置*/
-    public function actionShow()
-    {   
-        $params = Yii::$app->request->get();
-        $model = User::findIdentity(Yii::$app->user->id);
-        if(Yii::$app->user->id != $params['id'])
-        {       
-            return $this->render('error',['id'=>Yii::$app->user->id]);
+
+    public function actionProfile()
+    {
+        $model = Yii::$app->user->identity;
+        if ($model->load($_POST) && $model->save()) {
+            Yii::$app->session->setFlash('alert', [
+                'options'=>['class'=>'alert-success'],
+                'body'=>Yii::t('backend', 'Your profile has been successfully saved', [], $model->locale)
+            ]);
+            return $this->refresh();
         }
-        if(empty($model))
+        return $this->render('profile', ['model'=>$model]);
+    }
+
+
+    /*用户基本信息对外展示设置*/
+    public function actionAccount()
+    { 
+        $user = Yii::$app->user->identity;
+        if(empty($user))
         {   
             return $this->render('error',['id'=>Yii::$app->user->id]);
         }   
-        $this->layout = 'left_user_setting';
-        return $this->render('setting',['model'=>$model,]);
+        $model = new AccountForm();
+        $model->username = $user->username;
+        $model->email = $user->email;
+        if ($model->load($_POST) && $model->validate()) {
+            $user->username = $model->username;
+            $user->email = $model->email;
+            if ($model->password) {
+                $user->setPassword($model->password);
+            }
+            $user->save();
+            Yii::$app->session->setFlash('alert', [
+                'options'=>['class'=>'alert-success'],
+                'body'=>Yii::t('backend', 'Your account has been successfully saved')
+            ]);
+            return $this->refresh();
+        }
+        return $this->render('account', ['model'=>$model]);
+ 
     }   
 
 
@@ -90,7 +117,6 @@ class HomeController extends Controller
     public function actionAvatar()
     {
         $model = User::findIdentity(Yii::$app->user->id);
-        $this->layout = 'left_user_setting';
 
         if (Yii::$app->request->isPost) {
             $postAvatar = Yii::$app->request->post();
