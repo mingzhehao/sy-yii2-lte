@@ -1,5 +1,6 @@
 <?php
 return [
+    'name'=>'云管理后台',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'language'=>'zh-CN',
     'modules' => [

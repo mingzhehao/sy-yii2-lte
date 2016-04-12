@@ -11,6 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
+    'defaultRoute'=>'timeline-event/index',
     'modules'=>[
         'i18n' => [
             'class' => 'backend\modules\i18n\Module',
