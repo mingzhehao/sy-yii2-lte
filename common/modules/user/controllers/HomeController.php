@@ -61,7 +61,13 @@ class HomeController extends Controller
         if(isset($id) && !empty($id))
             $model = User::findIdentity($id);
         else
-            $model = User::findIdentity(Yii::$app->user->id);
+        {
+            $model = Yii::$app->user->identity;
+            if(empty($model))
+            {   
+                return $this->redirect(['/site/login']);
+            }
+        }
         if(empty($model))
         {
             return $this->render('error',['id'=>$id]);
@@ -73,6 +79,10 @@ class HomeController extends Controller
     public function actionProfile()
     {
         $model = Yii::$app->user->identity;
+        if(empty($model))
+        {   
+            return $this->redirect(['/site/login']);
+        }
         if ($model->load($_POST) && $model->save()) {
             Yii::$app->session->setFlash('alert', [
                 'options'=>['class'=>'alert-success'],
@@ -90,7 +100,7 @@ class HomeController extends Controller
         $user = Yii::$app->user->identity;
         if(empty($user))
         {   
-            return $this->render('error',['id'=>Yii::$app->user->id]);
+            return $this->redirect(['/site/login']);
         }   
         $model = new AccountForm();
         $model->username = $user->username;
@@ -117,6 +127,10 @@ class HomeController extends Controller
     public function actionAvatar()
     {
         $model = User::findIdentity(Yii::$app->user->id);
+        if(empty($model))
+        {
+            return $this->redirect(['/site/login']);
+        }
 
         if (Yii::$app->request->isPost) {
             $postAvatar = Yii::$app->request->post();
