@@ -1,12 +1,12 @@
 <?php
 /***************************************************************************
- * 上传功能插件
+ * 日志记录
  * Copyright (c) 2016 songyun, Inc. All Rights Reserved
  * 
  **************************************************************************/
  
 /**
- * @file common/util/Upload.php
+ * @file common/util/Logger.php
  * @author song(mingzhehao@github.com)
  * @date 2016/03/30 15:14:26
  *  
