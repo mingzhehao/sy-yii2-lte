@@ -32,6 +32,21 @@ class LoginForm extends Model
     }
 
     /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'username' => '用户名称',
+            'password_hash' => '用户密码',
+            'password' => '用户密码',
+            'email' => '用户邮箱',
+            'created_at' => '创建时间',
+            'updated_at' => '更新时间',
+        ];
+    }
+
+    /**
      * Validates the password.
      * This method serves as the inline validation for password.
      *
