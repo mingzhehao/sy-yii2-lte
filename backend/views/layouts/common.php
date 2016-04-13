@@ -27,7 +27,8 @@ if(!Yii::$app->user->isGuest)
 }
 else 
 {
-    $defaultSmallImage = "/images/noavatar_small.gif";
+    $userMiddleImage = "/images/noavatar_middle.gif";
+    $userSmallImage = "/images/noavatar_small.gif";
 }
 
 ?>

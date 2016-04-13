@@ -23,7 +23,11 @@ $this->params['body-class'] = array_key_exists('body-class', $this->params) ?
     <?php echo Html::csrfMetaTags() ?>
     <title><?php echo Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-
+    <style type="text/css">
+    .login-page {
+        background:url('/images/intro-bg.jpg');
+    }
+    </style>
 </head>
 <?php echo Html::beginTag('body', [
     'class' => implode(' ', [

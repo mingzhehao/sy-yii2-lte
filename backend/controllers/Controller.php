@@ -18,6 +18,7 @@ class Controller extends \yii\web\Controller
 {
     public function beforeAction($action)
     {   
+        $this->layout = \Yii::$app->user->isGuest ? 'base' : 'common';
         if (\Yii::$app->getUser()->getIsGuest()) {
             return $this->redirect(['/site/login']);
        }   

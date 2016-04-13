@@ -4,14 +4,13 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\search\TimelineEventSearch;
-use yii\web\Controller;
+use backend\controllers\Controller;
 
 /**
  * Application timeline controller
  */
 class TimelineEventController extends Controller
 {
-    public $layout = 'common';
     /**
      * Lists all TimelineEvent models.
      * @return mixed

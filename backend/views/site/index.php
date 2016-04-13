@@ -12,7 +12,7 @@ $this->title = '';
 
         <p class="lead">You have successfully login this admin powered application.</p>
 
-        <p><a class="btn btn-lg btn-success" href="/index.php?r=category">进入管理后台</a></p>
+        <p><a class="btn btn-lg btn-success" href="/timeline-event/index">进入管理后台</a></p>
     </div>
 
     <div class="body-content">
