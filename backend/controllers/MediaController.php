@@ -26,6 +26,7 @@ class MediaController extends Controller
     private $allowedFileType = array(
                             'application/zip',
                             'application/x-rar-compressed',
+                            'video/x-ms-wmv',
                         );
     public function behaviors()
     {

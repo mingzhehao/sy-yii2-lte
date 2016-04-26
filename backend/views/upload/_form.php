@@ -49,10 +49,10 @@ use dosamigos\fileupload\FileUploadUI;
         'gallery' => false,
         'fieldOptions' => [
             'accept' => 
-                'application/zip,application/x-rar-compressed,',//限制zip和rar包
+                'application/zip,application/x-rar-compressed,video/x-ms-wmv',//限制zip和rar包
         ],
         'clientOptions' => [
-                'maxFileSize' => 2000000
+                'maxFileSize' => 200000000
         ],
         // ...
         'clientEvents' => [
