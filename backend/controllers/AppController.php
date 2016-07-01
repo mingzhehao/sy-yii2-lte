@@ -5,7 +5,7 @@ namespace backend\controllers;
 use Yii;
 use common\models\App;
 use common\models\AppSearch;
-use yii\web\Controller;
+use backend\controllers\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use linslin\yii2\curl;
