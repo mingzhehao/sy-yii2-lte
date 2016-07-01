@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b86e4d0138d602b23416a5f8735a827",
-    "content-hash": "a134f7011ca88037b0f5538f61b9a863",
+    "hash": "3e8be3b5dd9996165edfa991afe14784",
+    "content-hash": "c3a6a90d31ed4b061422b4d73f21c506",
     "packages": [
         {
             "name": "2amigos/yii2-file-upload-widget",
@@ -145,7 +145,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/almasaeed2010/AdminLTE/8db979795044412a2e2b4e9659788c23cb59fcd3.zip",
+                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/8db979795044412a2e2b4e9659788c23cb59fcd3",
                 "reference": "8db979795044412a2e2b4e9659788c23cb59fcd3",
                 "shasum": ""
             },
@@ -1276,7 +1276,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/kartik-v/yii2-grid/fe29bcf8f46bde42aa3eb067851b38dc07cd4d8a.zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/fe29bcf8f46bde42aa3eb067851b38dc07cd4d8a",
                 "reference": "fe29bcf8f46bde42aa3eb067851b38dc07cd4d8a",
                 "shasum": ""
             },
@@ -1325,7 +1325,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/kartik-v/yii2-krajee-base/2d74f0102272189d5e3f672a2549485fae77b7e8.zip",
+                "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/2d74f0102272189d5e3f672a2549485fae77b7e8",
                 "reference": "2d74f0102272189d5e3f672a2549485fae77b7e8",
                 "shasum": ""
             },
@@ -1462,6 +1462,49 @@
             "time": "2016-01-12 16:59:09"
         },
         {
+            "name": "linslin/yii2-curl",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/linslin/Yii2-Curl.git",
+                "reference": "9bf2af281fba4e4f0923a055ee673ac2db955513"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/linslin/Yii2-Curl/zipball/9bf2af281fba4e4f0923a055ee673ac2db955513",
+                "reference": "9bf2af281fba4e4f0923a055ee673ac2db955513",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "linslin\\yii2\\curl\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Gajsek",
+                    "email": "info@linslin.org"
+                }
+            ],
+            "description": "Easy and nice cURL extension with RESTful support for Yii2",
+            "keywords": [
+                " curl",
+                "extension",
+                "restful",
+                "yii2"
+            ],
+            "time": "2016-04-20 14:14:59"
+        },
+        {
             "name": "mongosoft/yii2-upload-behavior",
             "version": "0.1.6",
             "source": {
@@ -1524,7 +1567,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/phpspec/php-diff/0464787bfa7cd13576c5a1e318709768798bec6a.zip",
+                "url": "https://api.github.com/repos/phpspec/php-diff/zipball/0464787bfa7cd13576c5a1e318709768798bec6a",
                 "reference": "0464787bfa7cd13576c5a1e318709768798bec6a",
                 "shasum": ""
             },
@@ -1667,7 +1710,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/trntv/probe/8c27c312630e4ec82286a142f64e2f6e10291fb8.zip",
+                "url": "https://api.github.com/repos/trntv/probe/zipball/8c27c312630e4ec82286a142f64e2f6e10291fb8",
                 "reference": "8c27c312630e4ec82286a142f64e2f6e10291fb8",
                 "shasum": ""
             },
@@ -1703,7 +1746,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/vlucas/phpdotenv/9caf304153dc2288e4970caec6f1f3b3bc205412.zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/9caf304153dc2288e4970caec6f1f3b3bc205412",
                 "reference": "9caf304153dc2288e4970caec6f1f3b3bc205412",
                 "shasum": ""
             },
@@ -2142,7 +2185,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-jui/37991d06ad952eead7bd5bb839c9a352d9b5e34a.zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/37991d06ad952eead7bd5bb839c9a352d9b5e34a",
                 "reference": "37991d06ad952eead7bd5bb839c9a352d9b5e34a",
                 "shasum": ""
             },
@@ -2192,7 +2235,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-redis/7fd93ff3847e765964c8c83b7e3eed0281078916.zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-redis/zipball/7fd93ff3847e765964c8c83b7e3eed0281078916",
                 "reference": "7fd93ff3847e765964c8c83b7e3eed0281078916",
                 "shasum": ""
             },
