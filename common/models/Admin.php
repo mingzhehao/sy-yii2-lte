@@ -19,6 +19,7 @@ use Yii;
  */
 class Admin extends \common\models\CustomActiveRecord
 {
+    var $password_hash_new;
     /**
      * @inheritdoc
      */
@@ -53,6 +54,7 @@ class Admin extends \common\models\CustomActiveRecord
             'username' => '用户名',
             'auth_key' => '认证Key',
             'password_hash' => '密码',
+            'password_hash_new' => '密码',
             'password_reset_token' => '密码重置Token',
             'email' => '邮箱',
             'status' => '状态',
@@ -63,6 +65,7 @@ class Admin extends \common\models\CustomActiveRecord
 
     public function beforeSave($insert)
     {
+        $password_hash_new = Yii::$app->request->post('password_hash_new');
         if($this->isNewRecord)
         {   
             $this->password_hash = Yii::$app->security->generatePasswordHash($this->password_hash);
@@ -72,9 +75,9 @@ class Admin extends \common\models\CustomActiveRecord
         else
         {   
             $this->updated_at=time();
-            if(!empty($this->password_hash)) 
+            if(!empty($password_hash_new)) 
             {   
-                $this->password_hash = Yii::$app->security->generatePasswordHash($this->password_hash);
+                $this->password_hash = Yii::$app->security->generatePasswordHash($password_hash_new);
             }  
         } 
         if(empty($this->password_hash))

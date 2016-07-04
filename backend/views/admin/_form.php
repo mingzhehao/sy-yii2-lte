@@ -17,9 +17,11 @@ use yii\widgets\ActiveForm;
     
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'password_hash')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'password_hash_new')->label("密码")->passwordInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'status')->textInput()->dropDownList(["10" => "活跃","0" => "封禁"]) ?>
+
+    <?= $form->field($model, 'password_hash')->label('')->hiddenInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '添加' : '更新', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
