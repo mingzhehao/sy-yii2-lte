@@ -168,7 +168,7 @@ else
                                 ['label' => '会员管理', 'icon' => '<i class="fa fa-user-plus"></i>', 'url' => ['/memberinfo/index'],],
                                 ['label' => '上传管理', 'icon' => '<i class="fa fa-cloud-upload"></i>', 'url' => ['/upload/index'],],
                                 ['label' => '个人设置', 'icon' => '<i class="fa fa-user"></i>', 'url' => ['/User/avatar'],],
-                                ['label' => '应用管理', 'icon' => '<i class="fa fa-dashboard"></i>', 'url' => ['/app/index'],],
+                                //['label' => '应用管理', 'icon' => '<i class="fa fa-dashboard"></i>', 'url' => ['/app/index'],],
                             ]
                         ],
                         [
