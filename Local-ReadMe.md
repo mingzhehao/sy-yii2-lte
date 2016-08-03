@@ -32,4 +32,22 @@
         ],
    这段代码需要放置在common/config/main.php中，不然执行 b 的时候 会报错
  
+8.菜单如何使用
+  a. 权限管理配置菜单(菜单对应路由，已从权限管理路由列表 左侧移动到右侧)
+  b. 在 backend/views/layouts/common.php 菜单对应位置配置 ,添加如下代码，可自行调整
+     echo dmstr\widgets\Menu::widget( [
+         'options' => ['class' => 'sidebar-menu'], 
+         'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id), 
+     ] );
+
+     执行调整后如下：
+         'label'=>Yii::t('backend', 'Content'),
+         'url' => '#',
+         'icon'=>'<i class="fa fa-edit"></i>',
+         'options' => ['class' => 'sidebar-menu'], 
+         'items' => MenuHelper::getAssignedMenu(Yii::$app->user->id), 
+
+   c. 引入rbac 在 backend/views/layouts/common.php
+      use mdm\admin\components\MenuHelper; 
+
 
