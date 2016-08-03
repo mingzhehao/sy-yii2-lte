@@ -21,8 +21,8 @@ class Controller extends \yii\web\Controller
         $this->layout = \Yii::$app->user->isGuest ? 'base' : 'common';
         if (\Yii::$app->getUser()->getIsGuest()) {
             return $this->redirect(['/site/login']);
-       }   
-
+        }   
+        $this->layout = "main"; //统一使用main模板
         return parent::beforeAction($action);
     }   
 
