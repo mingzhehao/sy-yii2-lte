@@ -35,7 +35,7 @@ class Admin extends \common\models\CustomActiveRecord
     {
         return [
             [['username', 'password_hash', 'email'], 'required'],
-            [['status', 'created_at', 'updated_at'], 'integer'],
+            [['status','role', 'created_at', 'updated_at'], 'integer'],
             [['username', 'password_hash', 'password_reset_token', 'email'], 'string', 'max' => 255],
             [['auth_key'], 'string', 'max' => 32],
             [['username'], 'unique'],
@@ -58,6 +58,7 @@ class Admin extends \common\models\CustomActiveRecord
             'password_reset_token' => '密码重置Token',
             'email' => '邮箱',
             'status' => '状态',
+            'role' => '角色',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',
         ];

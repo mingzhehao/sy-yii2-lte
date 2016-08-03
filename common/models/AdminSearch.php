@@ -58,6 +58,7 @@ class AdminSearch extends Admin
         $query->andFilterWhere([
             'id' => $this->id,
             'status' => $this->status,
+            'role'   => $this->role,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);

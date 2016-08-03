@@ -22,6 +22,7 @@ class m130524_201442_init extends Migration
             'photo' => $this->string(255),
 
             'status' => $this->smallInteger()->notNull()->defaultValue(10),
+            'role'   => $this->smallInteger()->notNull()->defaultValue(2),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
@@ -33,6 +34,7 @@ class m130524_201442_init extends Migration
             'password_reset_token' => null,
             'email' => 'kladmin@github.com',
             'status' => \common\models\User::STATUS_ACTIVE,
+            'role' => 1,// 超级管理员 1
             'created_at' => time(),
             'updated_at' => time(),
         ]); 
