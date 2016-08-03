@@ -169,6 +169,7 @@ else
                                 ['label' => '上传管理', 'icon' => '<i class="fa fa-cloud-upload"></i>', 'url' => ['/upload/index'],],
                                 ['label' => '个人设置', 'icon' => '<i class="fa fa-user"></i>', 'url' => ['/User/avatar'],],
                                 //['label' => '应用管理', 'icon' => '<i class="fa fa-dashboard"></i>', 'url' => ['/app/index'],],
+                                ['label' => '权限管理', 'icon' => '<i class="fa fa-dashboard"></i>', 'url' => ['/rbac/user'],],
                             ]
                         ],
                         [
