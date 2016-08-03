@@ -19,7 +19,7 @@ $this->title = Yii::t('backend', 'Edit account')
     
     <?= $form->field($model, 'email')->label('用户邮箱')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'password')->label('用户密码')->passwordInput()->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'password')->label('用户密码')->passwordInput() ?>
     
     <?php echo $form->field($model, 'password_confirm')->passwordInput() ?>
 
