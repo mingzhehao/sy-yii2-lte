@@ -18,7 +18,9 @@
 
 6.新添加上传插件2amigos/yii2-file-upload-widget 上传控制器为MediaController，控制器内填写上传目录等，需配置目录nginx可写权限 (需要对upload/temp 目录进行 777 授权，以及chown改变所属)
 
-7.rbac 安装 
+7.进行google 字体域名替换， 执行 transfer_google_360.sh 脚本进行自动替换即可
+
+8.rbac 安装 
   a 执行  
     yii migrate --migrationPath=@mdm/admin/migrations
   b 执行  
