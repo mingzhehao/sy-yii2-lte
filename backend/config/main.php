@@ -31,9 +31,9 @@ return [
             ],
             'menus' => [
                 'assignment' => [
-                    'label' => 'Grand Access' // change label
+                    'label' => '授权分配' // change label
                 ],
-                'route' => 'route', // disable menu
+                'route' => '路由设定', // disable menu
                 //'route' => null, // disable menu
             ],
         ],
@@ -93,9 +93,8 @@ return [
              * 2 此处首先开启部分功能，不然无法分配
              * 3 在结合对应控制的accessControl
              */
-            'admin/*', // add or remove allowed actions to this list
-            //'site/*',
-            'user/*',
+            'site/*',
+            'rbac/*',
         ]
     ],
     'params' => $params,
