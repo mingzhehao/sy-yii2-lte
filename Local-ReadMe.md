@@ -18,3 +18,18 @@
 
 6.新添加上传插件2amigos/yii2-file-upload-widget 上传控制器为MediaController，控制器内填写上传目录等，需配置目录nginx可写权限 (需要对upload/temp 目录进行 777 授权，以及chown改变所属)
 
+7.rbac 安装 
+  a 执行  
+    yii migrate --migrationPath=@mdm/admin/migrations
+  b 执行  
+    yii migrate --migrationPath=@yii/rbac/migrations
+  
+  执行yii migrate 的时候，由于migrate是依赖于console的，所以公共的config配置，需要放置在common/config中
+  比如:
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
+            'defaultRoles' => ['guest'],
+        ],
+   这段代码需要放置在common/config/main.php中，不然执行 b 的时候 会报错
+ 
+
