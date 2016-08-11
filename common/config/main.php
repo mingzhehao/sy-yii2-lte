@@ -63,6 +63,26 @@ return [
                 // configure more hosts if you have a cluster
             ],
         ],
+        'mailer' => [ 
+            'class' => 'yii\swiftmailer\Mailer', 
+            'viewPath' => '@common/mail', 
+            // send all mails to a file by default. You have to set 
+            // 'useFileTransport' to false and configure a transport 
+            // for the mailer to send real emails. 
+            'useFileTransport' => false, //false 发送邮件，true 不发送邮件，只输出日志(console/runtime/mail)
+            'transport' => [ 
+                'class' => 'Swift_SmtpTransport', 
+                'host' => 'smtp.126.com', 
+                'username' => 'justtest126', 
+                'password' => 'just126', //126，163 邮箱的授权码
+                'port' => '25', 
+                'encryption' => 'tls', 
+            ], 
+            'messageConfig'=>[ 
+                'charset'=>'UTF-8', 
+                'from'=>['justtest126@126.com'=>'justtest126'] 
+            ], 
+        ], 
 
     ],
 ];
