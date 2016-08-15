@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use common\models\Role;
 
@@ -10,7 +11,12 @@ use common\models\Role;
 ?>
 
 <div class="admin-form">
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(
+        [
+            'id' => 'form-id',
+            'enableAjaxValidation' => true,
+        ]
+    ); ?>
     
     <?= $form->errorSummary($model) ?> 
 

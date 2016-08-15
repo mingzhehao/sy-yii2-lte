@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\grid\GridView;
+use yii\bootstrap\Modal;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\AdminSearch */
@@ -9,13 +11,32 @@ use yii\grid\GridView;
 
 $this->title = '用户管理';
 $this->params['breadcrumbs'][] = $this->title;
+
+$requestUrl = Url::toRoute('create');
+$js = <<<JS
+    $(document).on('click', '#create', function () {
+        $.get('{$requestUrl}', {},
+            function (data) {
+                $('.modal-body').html(data);
+            }  
+        );
+    });
+JS;
+$this->registerJs($js);
 ?>
 <div class="admin-index">
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('添加用户', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('添加用户', ['create'],
+            [
+                'class' => 'btn btn-success',
+                'id' => 'create',
+                'data-toggle' => 'modal',
+                'data-target' => '#create-modal',
+            ]) 
+        ?>
     </p>
 
     <?= GridView::widget([
@@ -59,3 +80,12 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 
 </div>
+
+<?php
+Modal::begin([
+    'id' => 'create-modal',
+    'header' => '<h4 class="modal-title">创建</h4>',
+    'footer' => '<a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>',
+]); 
+Modal::end();
+?>
