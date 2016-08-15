@@ -45,7 +45,6 @@ $this->registerJs($js);
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'username',
             //'auth_key',
             //'password_hash',
