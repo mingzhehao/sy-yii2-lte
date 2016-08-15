@@ -50,10 +50,11 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'attribute' => 'file',
-                'format' => ['image',['width'=>'100','height'=>'100']],
+                'format' => ['raw',['width'=>'100','height'=>'100']],
                 'value'     => function ($data) {
                     //$sourcePath = Yii::$app->params['upload']['webPath'];
-                    return $data->file;
+                    $link = Html::a($data->file,[$data->file]);
+                    return $link;
                 }
             ],
             [   
