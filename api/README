@@ -1,0 +1,9 @@
+1.restful 方式url
+    http://123.57.44.210:10011/v1/user/index
+    http://123.57.44.210:10011/v1/users/1
+
+2.自定义接口方式url
+    http://123.57.44.210:10011/v1/test/index
+    http://123.57.44.210:10011/v1/test/view?id=2
+
+3.自定义url  http://www.yiiframework.com/wiki/748/building-a-rest-api-in-yii2-0/
