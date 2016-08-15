@@ -5,7 +5,7 @@ namespace api\modules\v1\controllers;
 use yii\web\Controller;
 use common\models\Admin;
 
-class TestController extends Controller
+class CustomerController extends Controller
 {
     public function actionIndex()  
     {  

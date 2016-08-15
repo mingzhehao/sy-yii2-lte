@@ -1,9 +1,18 @@
 1.restful 方式url
+    浏览器返回xml
     http://123.57.44.210:10011/v1/user/index
     http://123.57.44.210:10011/v1/users/1
 
+    浏览器返回json，程序指定
+    http://123.57.44.210:10011/v1/admins/2
+    http://123.57.44.210:10011/v1/admins
+
+    为什么用复数，这是restful的规定,可以通过config过的路由指定为想要的路由名称
+
+
 2.自定义接口方式url
-    http://123.57.44.210:10011/v1/test/index
-    http://123.57.44.210:10011/v1/test/view?id=2
+    http://123.57.44.210:10011/v1/customer/index
+    http://123.57.44.210:10011/v1/customet/view?id=2
+
 
 3.自定义url  http://www.yiiframework.com/wiki/748/building-a-rest-api-in-yii2-0/
