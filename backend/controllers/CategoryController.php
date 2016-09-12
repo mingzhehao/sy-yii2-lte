@@ -8,7 +8,7 @@ use common\models\CategorySearch;
 use backend\controllers\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use Kint;
 /**
  * CategoryController implements the CRUD actions for Category model.
  */
@@ -34,7 +34,7 @@ class CategoryController extends Controller
     {
         $searchModel = new CategorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        //Kint::dump($searchModel); // pass any number of parameters
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
