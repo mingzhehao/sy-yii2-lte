@@ -52,4 +52,5 @@
    c. 引入rbac 在 backend/views/layouts/common.php
       use mdm\admin\components\MenuHelper; 
 
-
+9.引入Kint调试
+    kint调试可以显示更多的object信息，浏览器默认只会显示部分object信息，不全面
