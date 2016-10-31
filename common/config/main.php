@@ -11,7 +11,15 @@ return [
             'class' => '\kartik\grid\Module'
         ]       
     ],
+    'controllerMap' => [
+        'swooleasync' => [
+            'class' => 'mevyen\swooleAsync\SwooleAsyncController',
+        ],
+    ],
     'components' => [
+        'swooleasync' => [
+            'class' => 'mevyen\swooleAsync\SwooleAsyncComponent',
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

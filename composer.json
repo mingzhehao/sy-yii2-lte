@@ -35,7 +35,8 @@
         "yiisoft/yii2-redis": "^2.0",
         "linslin/yii2-curl": "*",
         "mdmsoft/yii2-admin": "~2.0",
-        "raveren/kint": "^1.0"
+        "raveren/kint": "^1.0",
+        "mevyen/yii2-swoole-async": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

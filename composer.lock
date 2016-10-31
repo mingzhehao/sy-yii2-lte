@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d441f955926248b5f28605a2a49a008e",
-    "content-hash": "42e819b7d67d28fb7cc0a70b51368036",
+    "hash": "72b59b9fd488fa8a62423a146fdfa3c0",
+    "content-hash": "044a34afe3a728adc847498805aec533",
     "packages": [
         {
             "name": "2amigos/yii2-file-upload-widget",
@@ -1658,6 +1658,46 @@
             "time": "2016-05-20 23:38:13"
         },
         {
+            "name": "mevyen/yii2-swoole-async",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mevyen/yii2-swoole-async.git",
+                "reference": "33dc6e21888673d0ee1553f8b28448b58f4fb14f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mevyen/yii2-swoole-async/zipball/33dc6e21888673d0ee1553f8b28448b58f4fb14f",
+                "reference": "33dc6e21888673d0ee1553f8b28448b58f4fb14f",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "mevyen\\swooleAsync\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "mevyen",
+                    "email": "mevyen@126.com"
+                }
+            ],
+            "description": "yii2异步任务扩展",
+            "keywords": [
+                "extension",
+                "yii2"
+            ],
+            "time": "2016-09-30 07:46:03"
+        },
+        {
             "name": "mongosoft/yii2-upload-behavior",
             "version": "0.1.6",
             "source": {
@@ -2624,7 +2664,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mevyen/yii2-swoole-async": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
