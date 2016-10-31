@@ -54,3 +54,11 @@
 
 9.引入Kint调试
     kint调试可以显示更多的object信息，浏览器默认只会显示部分object信息，不全面
+
+10.yii2引入swoole  (https://github.com/mevyen/yii2-swoole-async)
+
+    1.启动swooleServer  php70 yii swooleasync/run start
+
+    2.执行console任务   php70 yii swoole/swoole 
+
+    3.检查日志文件      tailf /tmp/swoole/log/http.log
