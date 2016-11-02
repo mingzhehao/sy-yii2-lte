@@ -239,16 +239,16 @@
         },
         {
             "name": "bower-asset/blueimp-file-upload",
-            "version": "v9.13.0",
+            "version": "v9.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blueimp/jQuery-File-Upload.git",
-                "reference": "eb8c3627f3a85e45710d84651f89bb9189b85d4a"
+                "reference": "6906d8dbf9e3c0dc2f2f67868f25f4bddd461eb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/eb8c3627f3a85e45710d84651f89bb9189b85d4a",
-                "reference": "eb8c3627f3a85e45710d84651f89bb9189b85d4a",
+                "url": "https://api.github.com/repos/blueimp/jQuery-File-Upload/zipball/6906d8dbf9e3c0dc2f2f67868f25f4bddd461eb5",
+                "reference": "6906d8dbf9e3c0dc2f2f67868f25f4bddd461eb5",
                 "shasum": ""
             },
             "require": {
@@ -318,16 +318,16 @@
         },
         {
             "name": "bower-asset/blueimp-load-image",
-            "version": "v2.8.0",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blueimp/JavaScript-Load-Image.git",
-                "reference": "b1bf512606f00690aefe7b756888e1ed8df4860e"
+                "reference": "406453f0a605e0b080dbae722e84b4c47a8f58f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blueimp/JavaScript-Load-Image/zipball/b1bf512606f00690aefe7b756888e1ed8df4860e",
-                "reference": "b1bf512606f00690aefe7b756888e1ed8df4860e",
+                "url": "https://api.github.com/repos/blueimp/JavaScript-Load-Image/zipball/406453f0a605e0b080dbae722e84b4c47a8f58f8",
+                "reference": "406453f0a605e0b080dbae722e84b4c47a8f58f8",
                 "shasum": ""
             },
             "type": "bower-asset-library"
@@ -1558,16 +1558,16 @@
         },
         {
             "name": "linslin/yii2-curl",
-            "version": "1.0.8",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/linslin/Yii2-Curl.git",
-                "reference": "9bf2af281fba4e4f0923a055ee673ac2db955513"
+                "reference": "72ea79e6841696e489577c19b27859075b6aca72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/linslin/Yii2-Curl/zipball/9bf2af281fba4e4f0923a055ee673ac2db955513",
-                "reference": "9bf2af281fba4e4f0923a055ee673ac2db955513",
+                "url": "https://packagist.phpcomposer.com/files/linslin/Yii2-Curl/72ea79e6841696e489577c19b27859075b6aca72.zip",
+                "reference": "72ea79e6841696e489577c19b27859075b6aca72",
                 "shasum": ""
             },
             "require": {
@@ -1597,7 +1597,7 @@
                 "restful",
                 "yii2"
             ],
-            "time": "2016-04-20 14:14:59"
+            "time": "2016-10-31 12:31:06"
         },
         {
             "name": "mdmsoft/yii2-admin",
@@ -1667,7 +1667,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mevyen/yii2-swoole-async/zipball/33dc6e21888673d0ee1553f8b28448b58f4fb14f",
+                "url": "https://packagist.phpcomposer.com/files/mevyen/yii2-swoole-async/33dc6e21888673d0ee1553f8b28448b58f4fb14f.zip",
                 "reference": "33dc6e21888673d0ee1553f8b28448b58f4fb14f",
                 "shasum": ""
             },
