@@ -62,3 +62,11 @@
     2.执行console任务   php70 yii swoole/swoole 
 
     3.检查日志文件      tailf /tmp/swoole/log/http.log
+
+
+11.swoole  完全集成到yii2中，启动server监控所有的http请求，可调用所有的yii2方法
+   1.swoole 目录获取
+     common/config/bootstrap.php 配置swoole alias
+   2.main.php 获取 放到主目录下
+   3.console/config/main-swoole.php 进行配置，进行命名空间指定，指定到swoole中，这样。Module中的runAction才会找到，你想调用的文件
+   4.对swoole/controller 进行个人的控制器编写，提供可用接口

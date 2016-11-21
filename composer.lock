@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "72b59b9fd488fa8a62423a146fdfa3c0",
-    "content-hash": "044a34afe3a728adc847498805aec533",
+    "hash": "276d9e801405c92fd9855ea12ffe5402",
+    "content-hash": "d7e2ffddc72399d794b2d64432d881bd",
     "packages": [
         {
             "name": "2amigos/yii2-file-upload-widget",
@@ -1068,6 +1068,241 @@
             "time": "2016-04-29 12:21:54"
         },
         {
+            "name": "hprose/hprose",
+            "version": "v2.0.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hprose/hprose-php.git",
+                "reference": "30f1151383ea95d6b9f5141759a1f9db424bb5ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/hprose/hprose-php/30f1151383ea95d6b9f5141759a1f9db424bb5ea.zip",
+                "reference": "30f1151383ea95d6b9f5141759a1f9db424bb5ea",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.0.0"
+            },
+            "suggest": {
+                "ext-hprose": "Faster serialize and unserialize hprose extension."
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Hprose.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ma Bingyao",
+                    "email": "andot@hprose.com",
+                    "homepage": "http://hprose.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "It is a modern, lightweight, cross-language, cross-platform, object-oriented, high performance, remote dynamic communication middleware. It is not only easy to use, but powerful. You just need a little time to learn, then you can use it to easily construct cross language cross platform distributed application system.",
+            "homepage": "http://hprose.com/",
+            "keywords": [
+                "HTML5",
+                "Hprose",
+                "Socket",
+                "ajax",
+                "async",
+                "communication",
+                "cross-domain",
+                "cross-language",
+                "cross-platform",
+                "framework",
+                "future",
+                "game",
+                "http",
+                "json",
+                "jsonrpc",
+                "library",
+                "middleware",
+                "phprpc",
+                "protocol",
+                "rpc",
+                "serialization",
+                "serialize",
+                "service",
+                "tcp",
+                "unix",
+                "web",
+                "webapi",
+                "webservice",
+                "websocket",
+                "xmlrpc"
+            ],
+            "time": "2016-10-16 03:58:49"
+        },
+        {
+            "name": "hprose/hprose-swoole",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hprose/hprose-swoole.git",
+                "reference": "220eab072f0ae7cdf3b8c2d861f0144f91683dfe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/hprose/hprose-swoole/220eab072f0ae7cdf3b8c2d861f0144f91683dfe.zip",
+                "reference": "220eab072f0ae7cdf3b8c2d861f0144f91683dfe",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": ">=1.8.8",
+                "hprose/hprose": ">=2.0.9",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.0.0"
+            },
+            "suggest": {
+                "ext-hprose": "Faster serialize and unserialize hprose extension."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hprose\\Swoole\\": "src/Hprose/Swoole"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ma Bingyao",
+                    "email": "andot@hprose.com",
+                    "homepage": "http://hprose.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Hprose asynchronous client & standalone server based on swoole",
+            "homepage": "http://hprose.com/",
+            "keywords": [
+                "HTML5",
+                "Hprose",
+                "Socket",
+                "ajax",
+                "async",
+                "communication",
+                "cross-domain",
+                "cross-language",
+                "cross-platform",
+                "framework",
+                "future",
+                "game",
+                "http",
+                "json",
+                "jsonrpc",
+                "library",
+                "middleware",
+                "phprpc",
+                "protocol",
+                "rpc",
+                "serialization",
+                "serialize",
+                "service",
+                "tcp",
+                "unix",
+                "web",
+                "webapi",
+                "webservice",
+                "websocket",
+                "xmlrpc"
+            ],
+            "time": "2016-10-25 08:08:13"
+        },
+        {
+            "name": "hprose/hprose-yii",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hprose/hprose-yii.git",
+                "reference": "865520376d232eadd1274a1c71400b9ba0ebca64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/hprose/hprose-yii/865520376d232eadd1274a1c71400b9ba0ebca64.zip",
+                "reference": "865520376d232eadd1274a1c71400b9ba0ebca64",
+                "shasum": ""
+            },
+            "require": {
+                "hprose/hprose": "^2.0",
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.0.0"
+            },
+            "suggest": {
+                "ext-hprose": "Faster serialize and unserialize hprose extension."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hprose\\Yii\\": "src/Hprose/Yii"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ma Bingyao",
+                    "email": "andot@hprose.com",
+                    "homepage": "http://hprose.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Hprose Server for Yii 2",
+            "homepage": "http://hprose.com/",
+            "keywords": [
+                "HTML5",
+                "Hprose",
+                "Socket",
+                "ajax",
+                "async",
+                "communication",
+                "cross-domain",
+                "cross-language",
+                "cross-platform",
+                "framework",
+                "future",
+                "game",
+                "http",
+                "json",
+                "jsonrpc",
+                "library",
+                "middleware",
+                "protocol",
+                "rpc",
+                "serialization",
+                "serialize",
+                "service",
+                "tcp",
+                "unix",
+                "web",
+                "webapi",
+                "webservice",
+                "websocket",
+                "xmlrpc",
+                "yii"
+            ],
+            "time": "2016-07-27 03:20:34"
+        },
+        {
             "name": "imagine/imagine",
             "version": "v0.5.0",
             "source": {
@@ -1598,6 +1833,49 @@
                 "yii2"
             ],
             "time": "2016-10-31 12:31:06"
+        },
+        {
+            "name": "matyhtf/swoole_framework",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swoole/framework.git",
+                "reference": "7b7732e66556be63e4f654a57f2dd5a16be64f30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/swoole/framework/7b7732e66556be63e4f654a57f2dd5a16be64f30.zip",
+                "reference": "7b7732e66556be63e4f654a57f2dd5a16be64f30",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Swoole": "libs/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Tianfeng Han",
+                    "email": "mikan.tenny@gmail.com"
+                }
+            ],
+            "description": "PHP Networking framework & Application Server.",
+            "homepage": "http://www.swoole.com/",
+            "keywords": [
+                "Socket",
+                "client",
+                "framework",
+                "library",
+                "server",
+                "webserver",
+                "websocket"
+            ],
+            "time": "2016-10-27 02:42:12"
         },
         {
             "name": "mdmsoft/yii2-admin",
@@ -2665,7 +2943,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mevyen/yii2-swoole-async": 20
+        "mevyen/yii2-swoole-async": 20,
+        "hprose/hprose-swoole": 20,
+        "matyhtf/swoole_framework": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
