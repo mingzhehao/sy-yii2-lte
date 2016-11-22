@@ -57,6 +57,14 @@ class SwooleController extends \yii\web\Controller
         $model=$this->findModel($id);
         return json_encode(array('status'=>1,'data'=>array_filter($model->attributes)),JSON_PRETTY_PRINT);
     }
+
+    public function actionReload()
+    {
+        sleep(10);
+        $id = 1;
+        $model=$this->findModel($id);
+        return json_encode(array('status'=>1,'data'=>array_filter($model->attributes)),JSON_PRETTY_PRINT);
+    }
  
     /* function to find the requested record/model */
     protected function findModel($id)

@@ -135,6 +135,24 @@ class SwooleService{
     }
 
     /**
+     * 平滑重启服务
+     * @return [type]       [description]
+     */
+    public function serviceReload(){
+        $pidfile = $this->settings['pidfile'];
+        if (is_file($pidfile))
+        {   
+            $serverPid = explode("\n", file_get_contents($pidfile));
+            $serverPid = $serverPid[0];
+        }   
+        else
+        {   
+            $serverPid = 0;
+        } 
+        posix_kill(trim($serverPid), SIGUSR1);
+    }
+
+    /**
      * 查看进程列表
      * @return [type] [description]
      */

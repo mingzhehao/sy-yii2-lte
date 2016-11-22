@@ -73,8 +73,8 @@ switch ($mode) {
     case 'stop':
         $swooleService->serviceStop();
         break;
-    case 'stats':
-        $swooleService->serviceStats();
+    case 'reload':
+        $swooleService->serviceReload();
         break;
     case 'list':
         $swooleService->serviceList();
