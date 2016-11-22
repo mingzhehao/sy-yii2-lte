@@ -5,6 +5,7 @@ namespace swoole\controllers;
 use Yii;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use common\models\Admin;
 
 /**
  * SwooleController implements the CRUD actions for Swoole model.
@@ -48,6 +49,27 @@ class SwooleController extends \yii\web\Controller
                 "servicer_verify_status": 0
             }
         }';
+    }
+
+    public function actionView()
+    {
+        $id = 1;
+        $model=$this->findModel($id);
+        return json_encode(array('status'=>1,'data'=>array_filter($model->attributes)),JSON_PRETTY_PRINT);
+    }
+ 
+    /* function to find the requested record/model */
+    protected function findModel($id)
+    {
+        if (($model = Admin::findOne($id)) !== null) 
+        {
+            return $model;
+        } 
+        else 
+        {
+            echo json_encode(array('status'=>0,'error_code'=>400,'message'=>'Bad request'),JSON_PRETTY_PRINT);
+            exit;
+        }
     }
 
 }

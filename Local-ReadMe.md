@@ -70,3 +70,7 @@
    2.main.php 获取 放到主目录下
    3.console/config/main-swoole.php 进行配置，进行命名空间指定，指定到swoole中，这样。Module中的runAction才会找到，你想调用的文件
    4.对swoole/controller 进行个人的控制器编写，提供可用接口
+
+12.对比swoole 接口 与 yii api接口性能 (执行的操作都是一样的，底层都是yii路由，区别就是一个通过php-fpm 一个通过swoole)
+    ab -c 2000 -n 2000 "http://127.0.0.1:9501/swoole/view"
+    ab -c 2000 -n 2000 "http://123.57.44.210:10011/v1/customer/view?id=1"
