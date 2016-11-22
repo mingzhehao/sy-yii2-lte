@@ -164,7 +164,18 @@ class SHttpServer {
      * 接受http请求，进行分发处理
      */
     public function onRequest($request,$response){
+        $requestUri = $request->server["request_uri"];
         $action = "swoole/index";
+        if(isset($requestUri) && !empty($requestUri))
+        {
+            $requestUriArray = explode("/",$requestUri);
+            if(isset($requestUriArray[1]) && isset($requestUriArray[2])){
+                $action = "$requestUriArray[1]/$requestUriArray[2]";
+            }
+            else if (isset($requestUriArray[1])){
+                $action = "$requestUriArray[1]/index";
+            }
+        }
         $params = array();
         $res = "default data";
         $parts = $this->app->createController($action);
