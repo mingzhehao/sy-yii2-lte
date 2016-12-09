@@ -60,6 +60,20 @@ $settings = yii\helpers\ArrayHelper::merge(
     $defaultSetting,
     $paramsSetting
 );
+
+/**
+ * swoole日志目录创建，并赋予权限
+ */
+$swooleLogArray = array($settings['log_dir'],$settings['task_tmpdir']);
+foreach ($swooleLogArray as $key => $val)
+{
+    if (!is_dir($val)){
+        echo "创建目录 $val\n\n";
+        mkdir($val, 0666, true);
+        chmod($val, 0666);
+    }
+}
+
 $swooleService = new SwooleService($settings,$application);
 $mode = isset($argv["1"])?$argv["1"]:"start";
 switch ($mode) {
